@@ -1,4 +1,4 @@
-# Only Тестовое задание
+# At work Тестовое задание
 
 ## Установка
 
@@ -19,4 +19,3 @@ npm run start
 ```sh
 npm run build
 ```
-# Only-test
