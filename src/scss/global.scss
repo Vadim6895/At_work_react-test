@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 html {
   box-sizing: border-box;
   height: 100%;
@@ -11,11 +13,11 @@ html {
 
 body {
   color: #000;
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: Manrope, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 20px;
-  background-color: var(--bckg-color);
+  background-color: $gray-100;
   min-width: 320px;
 }
 

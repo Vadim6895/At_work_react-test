@@ -1,0 +1,144 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/mixins" as *;
+
+.backLink {
+  padding-top: 20px;
+
+  svg {
+    margin-right: 15px;
+  }
+
+  a {
+    color: $gray-400;
+
+    @include font(16px, 22px, 600);
+
+    @media (min-width: $xxl) {
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
+}
+
+.editProfile {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 50px;
+
+  @media (min-width: $xxl) {
+    flex-direction: row;
+  }
+
+  &__user {
+    width: 100%;
+    background-color: $white;
+    margin-right: 40px;
+    padding: 28px;
+    border-radius: 16px;
+
+    @media (min-width: $xxl) {
+      width: 360px;
+      min-width: 360px;
+      padding: 40px;
+    }
+  }
+
+  &__userPhoto {
+    border-radius: 8px;
+    margin-bottom: 30px;
+    width: 287px;
+    height: 187px;
+    object-fit: cover;
+
+    @media (min-width: $xxl) {
+      width: 280px;
+      height: 485px;
+    }
+  }
+
+  &__categoryBtn {
+    @include font(14px, 19px, 500);
+
+    display: block;
+    background-color: transparent;
+    text-align: left;
+    padding: 0;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 420px;
+    color: $gray-300;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $gray-200;
+
+    &:hover {
+      color: $aqua;
+    }
+
+    &:active {
+      color: $black;
+    }
+
+    &Active {
+      @include font(16px, 22px, 600);
+
+      color: $black;
+    }
+
+    @media (min-width: $xxl) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  // data
+  &__data {
+    background-color: $white;
+    width: 100%;
+    border-radius: 16px;
+    padding: 28px;
+    margin-top: 32px;
+
+    @media (min-width: $xxl) {
+      margin-top: 0;
+      padding: 40px;
+    }
+  }
+
+  &__title {
+    @include font(24px, 33px, 600);
+
+    margin: 0;
+    color: $black;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $gray-200;
+  }
+
+  &__saveBtn {
+    @include font(14px, 19px, 600);
+
+    border-radius: 50px;
+    background-color: $black;
+    color: $white;
+    padding: 12px 42px;
+    margin-top: 32px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 420px;
+
+    &:hover {
+      background-color: $gray-100;
+      color: $gray-400;
+    }
+
+    @media (min-width: $xxl) {
+      max-width: 170px;
+    }
+  }
+
+  @media (min-width: $xxl) {
+    font-size: 16px;
+    line-height: 22px;
+    width: auto;
+  }
+}

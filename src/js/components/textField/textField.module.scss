@@ -1,0 +1,60 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/mixins" as *;
+
+.textFieldBlock {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+}
+
+.label {
+  @include font(16px, 22px, 600);
+
+  color: $black;
+
+  @media (min-width: $xxl) {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+.input {
+  @include font(14px, 19px, 500);
+
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 50px;
+  border: 2px solid $gray-200;
+  margin-top: 10px;
+  color: $black;
+  padding: 8px 32px 8px 20px;
+
+  &:focus {
+    outline: none;
+  }
+
+  @media (min-width: $xxl) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.clearInput {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+
+  path {
+    fill: $gray-400;
+  }
+
+  @media (min-width: $xxl) {
+    bottom: 9px;
+  }
+}

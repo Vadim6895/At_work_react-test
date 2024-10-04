@@ -1,0 +1,62 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/mixins" as *;
+
+.dropDown {
+  position: relative;
+
+  &__btn {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    padding: 0;
+    position: relative;
+
+    svg {
+      fill: $black;
+      width: 15px;
+      height: 15px;
+
+      @media (min-width: $xxl) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &:hover {
+      svg {
+        fill: $aqua;
+      }
+    }
+  }
+
+  &__list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    background-color: $white;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 2px 3px 15px 0 $gray-200;
+    top: 24px;
+    right: 0;
+    z-index: 2;
+
+    @media (min-width: $xxl) {
+      width: 200px;
+    }
+  }
+
+  &__item {
+    @include font(16px, 22px, 500);
+
+    background-color: transparent;
+    padding: 10px;
+    text-align: left;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $aqua;
+    }
+  }
+}

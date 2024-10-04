@@ -1,0 +1,133 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/mixins" as *;
+
+.responseResumes {
+  padding-top: 30px;
+
+  &__title {
+    @include font(24px, 33px, 600);
+
+    color: $black;
+    border-bottom: 1px solid $gray-200;
+    padding-bottom: 20px;
+    margin: 0;
+  }
+
+  &__wrapper {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 161px);
+    grid-gap: 20px;
+
+    @media (min-width: $xl) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 32px 40px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 162px;
+    background-color: $white;
+    border-radius: 16px;
+    padding: 16px;
+    position: relative;
+
+    @media (min-width: $xl) {
+      flex-direction: row;
+      max-width: 360px;
+    }
+
+    @media (min-width: $xxl) {
+      padding: 24px;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    inset: 0;
+  }
+
+  &__photo {
+    border-radius: 8px;
+    width: 130px;
+    height: 120px;
+
+    @media (min-width: $xl) {
+      margin-right: 20px;
+      width: 112px;
+    }
+  }
+
+  &__info {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 25px;
+    grid-template-rows: min-content min-content auto;
+    margin-top: 16px;
+
+    @media (min-width: $xl) {
+      margin-top: 0;
+    }
+  }
+
+  &__name {
+    @include font(18px, 25px, 600);
+
+    color: $aqua;
+    margin: 0;
+
+    @media (min-width: $xxl) {
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
+
+  &__company {
+    @include font(14px, 19px, 500);
+
+    color: $gray-400;
+    margin: 8px 0;
+
+    @media (min-width: $xxl) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  &__city {
+    @include font(10px, 14px, 500);
+
+    margin-top: auto;
+    margin-bottom: 0;
+    color: $gray-300;
+    grid-row: 3/3;
+
+    @media (min-width: $xxl) {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+
+  &Archives {
+    .responseResumes {
+      &__photo {
+        filter: saturate(0);
+      }
+
+      &__name {
+        color: $gray-400;
+      }
+
+      &__company {
+        color: $gray-300;
+      }
+
+      &__city {
+        color: $gray-200;
+      }
+    }
+  }
+}

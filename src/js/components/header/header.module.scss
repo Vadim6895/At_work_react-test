@@ -1,6 +1,62 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/mixins" as *;
+
+.header {
+  background-color: $white;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 16px;
+}
+
 .logo {
-  // background-image: url("../../../img/logo-full.svg");
-  width: 100px;
-  height: 100px;
-  background-repeat: no-repeat;
+  width: 124px;
+  height: 24px;
+}
+
+.profileNav {
+  display: flex;
+}
+
+.favoritesBtn,
+.notificationBtn {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  padding: 0;
+  display: none;
+
+  @media (min-width: $xxl) {
+    display: block;
+  }
+}
+
+.notificationBtn {
+  margin-right: 15px;
+}
+
+.profileLink {
+  display: flex;
+  align-items: center;
+  color: $gray-400;
+
+  @include font(16px, 22px, 500);
+
+  img {
+    border-radius: 100%;
+
+    @media (min-width: $xxl) {
+      margin-right: 9px;
+    }
+  }
+
+  span {
+    display: none;
+
+    @media (min-width: $xxl) {
+      display: inline;
+    }
+  }
 }
